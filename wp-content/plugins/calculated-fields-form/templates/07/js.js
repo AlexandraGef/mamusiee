@@ -1,0 +1,31 @@
+fbuilderjQuery( window ).on( 'load', function(){
+	var progressBar = function( e )
+		{
+			var p = (e.find( '.pbreak:visible' ).attr( 'page' ))*1+1,
+				t = e.find( '.pbreak' ).length;
+			e.find( '.wizard-progressbar-value' ).css( 'width',  (p/t*100)+'%' );	
+		};
+	if( fbuilderjQuery( '.cp_cff_minimalist .pbreak' ).length > 1 )
+	{	
+		fbuilderjQuery( '.cp_cff_minimalist .pbreak:visible' ).each(function(){
+			var p = fbuilderjQuery(this).parent();
+			if( p.find( '.wizard-progressbar' ).length != 0 ) return;
+			p.prepend( '<div><div class="wizard-progressbar"><div class="wizard-progressbar-value"></div></div></div>' );
+			progressBar( fbuilderjQuery( this ).closest( '#fbuilder' ) );
+		});
+		
+		fbuilderjQuery( '.cp_cff_minimalist .pbNext' ).click( 
+			(function( f ){
+				return function(){
+					f( fbuilderjQuery(this).closest( '#fbuilder' ) );
+				};
+			})( progressBar ) );
+					
+		fbuilderjQuery( '.cp_cff_minimalist .pbPrevious' ).click( 
+			(function( f ){
+				return function(){
+					f( fbuilderjQuery(this).closest( '#fbuilder' ) );
+				};
+			})( progressBar ) );	
+	}		
+});
