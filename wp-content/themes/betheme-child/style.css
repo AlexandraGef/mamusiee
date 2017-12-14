@@ -12,12 +12,62 @@ Version: 		1.6.1
 -------------------------------------------------------------- */
 
 
-.kalendarz_ciazy .ui-tabs-nav {
+ .ui-tabs-nav {
 background:none !important;
 }
-.kalendarz_ciazy .ui-tabs .ui-tabs-nav li {
+ .ui-tabs .ui-tabs-nav li {
 background:none !important;
 }
-.kalendarz_ciazy .ui-tabs .ui-tabs-nav li a {
-padding: 13px 8px !important;
+.ui-tabs .ui-tabs-nav li a {
+padding: 13px 6px !important;
+}
+.pierwszy_rok .ui-tabs .ui-tabs-nav li a {
+padding: 13px 12px !important;
+}
+.wpostahs-slider-nav-title.slick-slide {
+width: 170px !important;
+}
+#Top_bar .menu li ul{
+top:80px;
+}
+
+#Top_bar .menu li#menu-item-39 ul,#Top_bar .menu li#menu-item-185 ul{
+left:12px;
+}
+#Top_bar .menu li#menu-item-39 ul li a,#Top_bar .menu li#menu-item-185 ul li a{
+padding: 10px 10px 10px 10px;
+}
+#Top_bar .menu li ul li {
+width: 150px;
+}
+#Top_bar .menu li ul li.hover {
+background:#71D4FB;
+
+}
+#Top_bar .menu li ul li.hover a > span{
+color:white;
+}
+#Top_bar .menu > li ul li a {
+font-weight: 700;
+text-align: center;
+background: #69CFF7;
+border:none;
+}
+.accordion .question .title > .acc-icon-plus, .accordion .question .title > .acc-icon-minus{
+font-size: 36px;
+position: absolute;
+left: 7px;
+top: 20px;
+color: #FF8FAC;
+}
+.hover_box_wrapper {
+border: solid 2px #ff8fac;
+margin-bottom:30px;
+}
+#wpforo-wrap .wpfl-1 .wpforo-forum-title{
+font-size:25px !important;
+font-weight:lighter !important;
+}
+#wpforo-wrap .wpf_forum_unread, #wpforo-wrap .wpf_forum_unread a{
+font-weight:lighter !important;
 }

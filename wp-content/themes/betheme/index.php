@@ -22,7 +22,7 @@ if( $_GET && key_exists( 'mfn-b', $_GET ) ){
 }
 $blog_classes[] = $blog_layout;
 
-// Layout | Masonry Tiles | Quick Fix
+
 if( $blog_layout == 'masonry tiles' ){
 	$blog_layout = 'masonry';
 }
